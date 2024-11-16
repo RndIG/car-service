@@ -8,12 +8,7 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 public class Workshop {
-
-
-
-
     private Map<Integer,Order> orders;
-
 
     public Workshop(){
         this.orders = new HashMap<Integer, Order>();
