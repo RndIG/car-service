@@ -1,7 +1,8 @@
 package com.carservice.entities;
 
 
+import java.io.Serializable;
 
-public class Employee {
+public class Employee implements Serializable {
 
 }

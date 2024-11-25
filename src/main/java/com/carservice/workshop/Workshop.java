@@ -1,6 +1,7 @@
 package com.carservice.workshop;
 
 import com.carservice.entities.Order;
+import com.carservice.entities.WorkshopData;
 import com.carservice.utils.OrderStatus;
 import com.carservice.entities.Employee;
 
@@ -8,14 +9,22 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 public class Workshop {
+
+
     private Map<Integer,Order> orders;
 
+
     public Workshop(){
-        this.orders = new HashMap<Integer, Order>();
+        this.orders = new HashMap<>();
     }
+
 
     public Map<Integer, Order> getOrders() {
         return orders;
+    }
+
+    public void setOrders(Map<Integer, Order> orders) {
+        this.orders = orders;
     }
 
     public void openOrder(int orderId, int price) {
