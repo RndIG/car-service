@@ -46,7 +46,6 @@ class WorkshopDataTest {
 
     @Test
     void loadDataNoFile() {
-        //File datataFile = new File(TEST_FILEPATH);
         workshopData.loadData();
         assertNotNull(workshopData.getData());
         assertTrue(workshopData.getData().isEmpty());
