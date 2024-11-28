@@ -21,13 +21,13 @@ class WorkshopTest {
     }
 
     @Test
-    void openOrderTest() {
+    void openOrder() {
         workshop.openOrder(1,1000);
         assertFalse(orders.isEmpty());
     }
 
     @Test
-    void openOrderDuplicateOrderIdTest() {
+    void openOrderDuplicateOrderId() {
         workshop.openOrder(2, 1200);
         workshop.openOrder(2,5000);
         assertNotEquals(5000, orders.get(2).getPrice());
@@ -36,7 +36,7 @@ class WorkshopTest {
 
 
     @Test
-    void assignWorkerTest() {
+    void assignWorker() {
         workshop.openOrder(1,1000);
         Order testOrder = orders.get(1);
         workshop.assignWorker(1);
@@ -45,7 +45,7 @@ class WorkshopTest {
     }
 
     @Test
-    void assignWorkerNoSuchOrderIdTest() {
+    void assignWorkerNoSuchOrderId() {
         workshop.openOrder(1,1000);
         Order testOrder = orders.get(1);
         workshop.assignWorker(2);
@@ -53,7 +53,7 @@ class WorkshopTest {
     }
 
     @Test
-    void closeOrderTest() {
+    void closeOrder() {
         workshop.openOrder(1,1000);
         Order testOrder = orders.get(1);
         assertEquals(OrderStatus.OPEN,testOrder.getStatus());
@@ -63,7 +63,7 @@ class WorkshopTest {
     }
 
     @Test
-    void closeOrderNoWorkersTest() {
+    void closeOrderNoWorkers() {
         workshop.openOrder(1,1000);
         Order testOrder = orders.get(1);
         assertTrue(testOrder.getAssignees().isEmpty());

@@ -35,7 +35,7 @@ class WorkshopDataTest {
     }
 
     @Test
-    void saveDataTest() {
+    void saveData() {
         workshopData.setData(testData);
         workshopData.saveData();
         File dataFile = new File(TEST_FILEPATH);
@@ -45,7 +45,7 @@ class WorkshopDataTest {
     }
 
     @Test
-    void loadDataNoFileTest() {
+    void loadDataNoFile() {
         //File datataFile = new File(TEST_FILEPATH);
         workshopData.loadData();
         assertNotNull(workshopData.getData());
