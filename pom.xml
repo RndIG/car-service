@@ -14,6 +14,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit-jupiter-version>5.11.3</junit-jupiter-version>
         <maven-jar-plugin-version>3.4.2</maven-jar-plugin-version>
+<!--        <maven-war-plugin-version>3.4.0</maven-war-plugin-version>-->
+<!--        <jakarta-servlet-version>6.1.0</jakarta-servlet-version>-->
+<!--        <jetty-ee10-servlet-version>12.0.15</jetty-ee10-servlet-version>-->
+<!--        <jetty-maven-plugin-version>11.0.24</jetty-maven-plugin-version>-->
     </properties>
 
     <dependencies>
@@ -23,7 +27,21 @@
             <version>${junit-jupiter-version}</version>
             <scope>test</scope>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>jakarta.servlet</groupId>-->
+<!--            <artifactId>jakarta.servlet-api</artifactId>-->
+<!--            <version>${jakarta-servlet-version}</version>-->
+<!--            <scope>provided</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.eclipse.jetty.ee10</groupId>-->
+<!--            <artifactId>jetty-ee10-servlet</artifactId>-->
+<!--            <version>${jetty-ee10-servlet-version}</version>-->
+<!--        </dependency>-->
+
     </dependencies>
+
+<!--    <packaging>war</packaging>-->
 
     <build>
         <plugins>
@@ -39,6 +57,28 @@
                     </archive>
                 </configuration>
             </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-war-plugin</artifactId>-->
+<!--                <version>${maven-war-plugin-version}</version>-->
+<!--                <configuration>-->
+<!--                    <archive>-->
+<!--                        <manifest>-->
+<!--                            <addClasspath>true</addClasspath>-->
+<!--                        </manifest>-->
+<!--                    </archive>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--            <plugin>-->
+<!--                <groupId>org.eclipse.jetty</groupId>-->
+<!--                <artifactId>jetty-maven-plugin</artifactId>-->
+<!--                <version>11.0.24</version>-->
+<!--                <configuration>-->
+<!--                    <webApp>-->
+<!--                        <contextPath>/my-app</contextPath>-->
+<!--                    </webApp>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 
